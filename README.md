@@ -305,6 +305,44 @@ end
 
 - Every object goes through a lifecyle: Create, Read, Update, Delete
 
+
+## Setter
+
+- Also knows as a 'writer' method
+- Returns the value of instance variables
+- Can use `instance_method_set`, but this could pose problems
+
+```ruby
+def title=(title_argument)
+   @title = title_argument
+end 
+```
+
+
+
+## Getter
+
+- Also known as a 'reader' method
+- Returns the value of instance variables
+- Can use `instance_method_get`, but this could pose problems
+
+```ruby
+def title
+   @title
+end 
+```
+
+
+### Initializing the object using the getter setter method 
+
+1. Using the .new method to set the initialised object to a variable name 
+2. Using the dot notation to call the method title on the recipe instance
+
+```ruby
+recipe = Recipe.new 
+recipe.title = "Cake"
+```
+
 ## Initialize Method
 
 - Constructor method
@@ -314,17 +352,11 @@ end
 - `.new` will pass any arguments to initialize
 - Initialize method will still assign attribute values to instance, but can not re-assign
 
-## Setter
+```ruby
 
-- Also knows as a 'writer' method
-- Returns the value of instance variables
-- Can use `instance_method_set`, but this could pose problems
+```
 
-## Getter
 
-- Also known as a 'reader' method
-- Returns the value of instance variables
-- Can use `instance_method_get`, but this could pose problems
 
 ## Macro
 
